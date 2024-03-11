@@ -1,5 +1,9 @@
 A new Flutter project.
+
+
 Flutter application built using the given requiremnts.
+
+
 Dependencies:
 flutter_spinkit: ^5.2.0
 http: ^1.2.0
