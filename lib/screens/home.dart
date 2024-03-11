@@ -13,6 +13,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  //Funtion to fetch API details
   Future<HomePageDetails> getHomePageDetailsApi() async {
     final response = await http.get(Uri.parse(
         'http://devapiv3.dealsdray.com/api/v2/user/home/withoutPrice'));
@@ -33,6 +35,7 @@ class _HomeState extends State<Home> {
       body: Column(
         children: [
           Expanded(
+              //Displaying the data fetched from the API using Future BUilder widget
               child: FutureBuilder<HomePageDetails>(
             future: getHomePageDetailsApi(),
             builder: (context, snapshot) {
@@ -105,6 +108,7 @@ class _HomeState extends State<Home> {
   }
 }
 
+//Defining a Reusable widget in order to optimize the code
 class ResuableRow extends StatelessWidget {
   final String title;
   final String value;
